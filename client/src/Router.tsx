@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/error";
 import Home from "./pages/home";
+import Room from "./pages/room";
 
 const router = createBrowserRouter([
   {
@@ -8,11 +9,11 @@ const router = createBrowserRouter([
     element: <Home />,
     errorElement: <ErrorPage />,
   },
-//   {
-//     path: "/play/:roomId?",
-//     element: <Room />,
-//     errorElement: <ErrorPage />,
-//   },
+  {
+    path: "/play/:room_code?",
+    element: <Room />,
+    errorElement: <ErrorPage />,
+  },
 ]);
 
 const Router = () => {
